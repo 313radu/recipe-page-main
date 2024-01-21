@@ -1,0 +1,321 @@
+:root {
+    --max-width: 1440px;
+    --min-width: 375px;
+
+    /* Colors */
+    --clr-primary-100: hsl(14, 45%, 36%);
+    --clr-primary-200: hsl(332, 51%, 32%);
+
+    --clr-neutral-100: hsl(0, 0%, 100%);
+    --clr-neutral-200: hsl(330, 100%, 98%);
+    --clr-neutral-300: hsl(30, 54%, 90%);
+    --clr-neutral-400: hsl(30, 18%, 87%);
+    --clr-neutral-500: hsl(30, 10%, 34%);
+    --clr-neutrol-600: hsl(24, 5%, 18%);
+    --clr-neutral-700: hsl(33, 46%, 90%);
+
+    /* Font Size */
+    --fs-100: 1rem;
+
+    /* Font Family */
+    --ff-100: 'Young Serif', serif;
+
+    /* Font Weight */
+    --fw-100: 400;
+    --fw-200: 600;
+    --fw-300: 700;
+
+    /* MArgin */
+    --margin: 1em;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+}
+
+body {
+    background-color: var(--clr-neutral-700);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@font-face {
+    font-family: extraLight;
+    src: url("./assets/fonts/outfit/static/Outfit-ExtraLight.ttf");
+}
+
+@font-face {
+    font-family: regular;
+    src: url("./assets/fonts/outfit/static/Outfit-Regular.ttf");
+}
+
+@font-face {
+    font-family: semiBold;
+    src: url("./assets/fonts/outfit/static/Outfit-SemiBold.ttf");
+}
+
+@font-face {
+    font-family: bold;
+    src: url("./assets/fonts/outfit/static/Outfit-Bold.ttf");
+}
+
+p {
+    font-family: extralight, sans-serif;
+}
+
+/* Global Setup */
+
+article {
+    max-width: var(--max-width);
+    margin-top: 2em;
+    width: 80%;
+    background-color: var(--clr-neutral-100);
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+}
+
+article header,
+article main,
+article footer {
+    margin-inline: 2em 2em;
+}
+
+article header {
+    margin-top: 2em;
+    display: block;
+}
+
+article header img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 1em;
+}
+
+article header h1 {
+    margin-block: var(--margin) var(--margin);
+    font-family: regular, sans-serif;
+}
+
+article header p {
+    font-size: var(--fs-100);
+    line-height: 25px;
+}
+
+article main {
+    margin-top: 2em;
+}
+
+/* Main */
+
+article main {
+    display: block;
+}
+
+/* Section 1 */
+
+article main .preparation-time {
+    display: block;
+    padding: 2em 2em;
+    border-radius: 1em;
+    background-color: var(--clr-neutral-200);
+}
+
+article main .preparation-time p {
+    color: var(--clr-primary-200);
+    font-family: bold, sans-serif;
+    margin-bottom: var(--margin);
+}
+
+article main .preparation-time ul {
+    list-style: none;
+}
+
+article main .preparation-time ul li {
+    margin-top: 1em;
+    padding-left: 2em;
+    position: relative;
+    font-family: extraLight, sans-serif;
+    font-size: var(--fs-100);
+}
+
+article main .preparation-time ul li::before {
+    content: "";
+    width: 5px;
+    height: 5px;
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+    top: 40%;
+    left: 0;
+    background-color: var(--clr-primary-100);
+}
+
+article main .preparation-time ul li span {
+    font-family: bold, sans-serif;
+    ;
+    margin-right: .2em;
+}
+
+/* Section 2 */
+
+article main .ingredients {
+    padding: 2em 1em;
+    border-bottom: 1px solid var(--clr-neutral-400);
+
+}
+
+article main .ingredients h2 {
+    color: var(--clr-primary-100);
+    font-family: semiBold, sans-serif;
+    margin-block: 0em 1em;
+
+}
+
+article main .ingredients ul {
+    list-style: none;
+}
+
+article main .ingredients ul li {
+    font-size: var(--fs-100);
+    font-family: extraLight, sans-serif;
+    position: relative;
+    padding-left: 2em;
+    margin-block: .5em 0;
+}
+
+article main .ingredients ul li::before {
+    content: "";
+    width: 5px;
+    height: 5px;
+    background-color: var(--clr-primary-100);
+    position: absolute;
+    top: 40%;
+    left: 0;
+    border-radius: 50%;
+}
+
+/* Section 2 */
+
+article main .instructions {
+    padding-bottom: 2em;
+    padding-left: 1em;
+    margin-block: 2em 2em;
+    border-bottom: 1px solid var(--clr-neutral-400);
+}
+
+article main .instructions h2 {
+    color: var(--clr-primary-100);
+    font-family: semiBold, sans-serif;
+    margin-block: 0em 1em;
+}
+
+article main .instructions ol {
+    list-style: none;
+}
+
+article main .instructions ol li {
+    margin-top: 1em;
+    padding-left: 2em;
+    font-size: var(--fs-100);
+    font-family: extraLight, sans-serif;
+    position: relative;
+}
+
+article main .instructions ol li::before {
+    content: attr(data-number);
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-family: semiBold, sans-serif;
+    color: var(--clr-primary-100);
+    width: 5px;
+    height: 5px;
+}
+
+article main .instructions ol li span {
+    font-family: bold, sans-serif;
+}
+
+/* Footer */
+
+footer {
+    padding: 1em 1em;
+    display: block;
+}
+
+footer h2 {
+    color: var(--clr-primary-100);
+    font-family: semiBold, sans-serif;
+    margin-block: 0em 1em;
+}
+
+footer p {
+    font-size: var(--fs-100);
+}
+
+
+footer table {
+    width: 100%;
+    margin-block: 2em 2em;
+    display: block;
+}
+
+footer table tr td {
+    font-family: extraLight, sans-serif;
+    font-size: var(--fs-100);
+    border-bottom: 1px solid var(--clr-neutral-400);
+}
+
+footer table tr td:nth-child(1) {
+    padding-left: 1.5em;
+}
+
+footer table tr td:nth-child(2) {
+    padding: 1em 12em;
+    color: var(--clr-primary-200);
+    font-family: semibold, sans-serif;
+}
+
+/* Mobile Section */
+
+@media all and (max-width: 900px) {
+    article {
+        margin-top: 0;
+        width: 100%;
+        background-color: var(--clr-neutral-100);
+        border-top-left-radius: 1em;
+        border-top-right-radius: 1em;
+    }
+
+    article header img {
+        width: 100%;
+        display: block;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 0;
+    }
+
+    footer {
+        overflow-x: hidden;
+    }
+
+    footer table tr td:nth-child(2) {
+        padding: 1em 8em;
+        color: var(--clr-primary-200);
+        font-family: semibold, sans-serif;
+    }
+}
